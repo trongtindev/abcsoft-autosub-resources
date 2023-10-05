@@ -2,6 +2,7 @@
   "words": [
     "Conv",
     "traineddata",
-    "tessdata"
+    "tessdata",
+    "tesseract"
   ]
 }
