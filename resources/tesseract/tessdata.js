@@ -6,12 +6,21 @@ const getFiles = (path) => {
     .readdirSync(`./resources/tesseract/${path}`)
     .filter((e) => e.endsWith(".traineddata"))
     .filter((e) => !e.includes("_old"))
+    .filter((e) => !e.includes("_vert"))
     .sort()
     .map((e) => {
       const id = e.split(".")[0];
+      const name = (() => {
+        if (id == "chi_sim") {
+          return "Chinese simplified";
+        } else if (id == "chi_tra") {
+          return "Chinese traditional";
+        }
+        return isoConv(id) ?? id;
+      })();
       return {
         id: id,
-        name: isoConv(id) ?? id,
+        name: name,
       };
     });
 };
