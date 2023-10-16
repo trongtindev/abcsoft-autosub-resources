@@ -33,3 +33,4 @@ fs.writeFileSync(
     tessdata: getFiles("tessdata-4.1.0"),
   })
 );
+console.log('OK')
