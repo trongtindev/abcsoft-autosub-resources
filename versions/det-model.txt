@@ -1,0 +1,1 @@
+0.0.1:https://storage.abcsoft.store/resources/videocr-rec/0.0.1/model.pt
